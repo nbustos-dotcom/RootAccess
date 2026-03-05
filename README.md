@@ -1,6 +1,6 @@
 <meta name="google-site-verification" content="Pq2S4u5-hfMI4OZQ9CGMAwyUp_twJnyEefW_ysao4ls" />
 
-# Cybersecurity Hub
+# RootAccess
 
 Free cybersecurity learning resources, tool guides, and lab walkthroughs 
 for beginners and intermediate learners.
