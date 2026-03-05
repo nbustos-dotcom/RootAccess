@@ -1,0 +1,9 @@
+title: Cybersecurity Hub
+description: Free cybersecurity learning resources and tool guides
+url: "https://nbustos-dotcom.github.io"
+baseurl: "/cybersecurity-hub"
+
+theme: minima
+
+head_custom: |
+  <meta name="google-site-verification" content="Pq2S4u5-hfMI4OZQ9CGMAwyUp_twJnyEefW_ysao4ls" />
