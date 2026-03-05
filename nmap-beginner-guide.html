@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nmap beginner guide 2026. The most important commands for CTFs and pentesting with a full cheat sheet.">
+  <title>Nmap Beginner Guide 2026 | Cybersecurity Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0a0e1a; color: #e0e0e0; line-height: 1.7; }
+    header { background: #0d1117; border-bottom: 1px solid #30363d; padding: 0 40px; height: 64px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .header-left a { text-decoration: none; }
+    .header-left h1 { color: #58a6ff; font-size: 1.3rem; }
+    .header-left span { color: #8b949e; font-size: 0.8rem; border-left: 1px solid #30363d; padding-left: 12px; }
+    nav { display: flex; gap: 24px; }
+    nav a { color: #8b949e; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    nav a:hover { color: #58a6ff; }
+    .article-hero { background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); border-bottom: 1px solid #30363d; padding: 60px 40px; text-align: center; }
+    .article-tag { display: inline-block; background: rgba(35,134,54,0.1); border: 1px solid rgba(35,134,54,0.3); color: #3fb950; font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+    .article-hero h1 { font-size: 2.2rem; color: #ffffff; max-width: 800px; margin: 0 auto 16px; line-height: 1.3; }
+    .article-hero p { color: #8b949e; font-size: 1rem; max-width: 600px; margin: 0 auto; }
+    .article-container { max-width: 780px; margin: 0 auto; padding: 60px 40px; }
+    .article-container h2 { font-size: 1.5rem; color: #ffffff; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #30363d; }
+    .article-container h3 { font-size: 1.15rem; color: #e0e0e0; margin: 28px 0 12px; }
+    .article-container p { color: #c9d1d9; margin-bottom: 16px; font-size: 0.97rem; }
+    .article-container ul, .article-container ol { margin: 12px 0 20px 24px; color: #c9d1d9; font-size: 0.97rem; }
+    .article-container li { margin-bottom: 8px; }
+    .article-container a { color: #58a6ff; text-decoration: none; }
+    .article-container a:hover { text-decoration: underline; }
+    .article-container strong { color: #ffffff; }
+    .code-block { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 16px 20px; margin: 16px 0 24px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #e6edf3; overflow-x: auto; }
+    .code-block .comment { color: #8b949e; }
+    .table-wrap { overflow-x: auto; margin: 20px 0 28px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th { background: #161b22; color: #ffffff; padding: 12px 16px; text-align: left; border: 1px solid #30363d; font-weight: 600; }
+    td { padding: 12px 16px; border: 1px solid #30363d; color: #c9d1d9; background: #0d1117; }
+    tr:hover td { background: #161b22; }
+    .callout { background: rgba(88,166,255,0.07); border: 1px solid rgba(88,166,255,0.25); border-left: 4px solid #58a6ff; border-radius: 6px; padding: 20px 24px; margin: 28px 0; }
+    .callout p { margin: 0; color: #c9d1d9; }
+    .callout strong { color: #58a6ff; }
+    .warning { background: rgba(248,81,73,0.07); border: 1px solid rgba(248,81,73,0.25); border-left: 4px solid #f85149; border-radius: 6px; padding: 20px 24px; margin: 28px 0; }
+    .warning p { margin: 0; color: #c9d1d9; }
+    .warning strong { color: #f85149; }
+    .disclosure { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 16px 20px; margin-top: 48px; font-size: 0.83rem; color: #8b949e; text-align: center; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: #8b949e; text-decoration: none; font-size: 0.88rem; margin-bottom: 40px; transition: color 0.2s; }
+    .back-link:hover { color: #58a6ff; }
+    footer { background: #0d1117; border-top: 1px solid #30363d; padding: 40px; text-align: center; color: #8b949e; font-size: 0.85rem; }
+    .footer-brand { color: #58a6ff; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin: 12px 0; flex-wrap: wrap; }
+    .footer-links a { color: #58a6ff; text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; }
+    @media (max-width: 600px) { header { padding: 0 20px; } .header-left span { display: none; } .article-hero { padding: 40px 20px; } .article-hero h1 { font-size: 1.6rem; } .article-container { padding: 40px 20px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <a href="index.html"><h1>🛡️ Cybersecurity Hub</h1></a>
+    <span>Free resources for security learners</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about">About</a>
+  </nav>
+</header>
+
+<div class="article-hero">
+  <div class="article-tag">Tutorial</div>
+  <h1>Nmap Beginner Guide: The Most Important Commands for 2026</h1>
+  <p>The exact Nmap commands I use on every TryHackMe machine. Includes a full cheat sheet.</p>
+</div>
+
+<div class="article-container">
+  <a href="index.html" class="back-link">← Back to all articles</a>
+
+  <p>Nmap is the first tool every cybersecurity learner needs to master.
+  It's free, powerful, and used in virtually every penetration test.
+  I first used it on TryHackMe and it completely changed how I understood
+  network reconnaissance.</p>
+
+  <h2>What is Nmap?</h2>
+  <p>Nmap (Network Mapper) is a free, open-source tool for network
+  discovery and security auditing. It tells you what devices are on a
+  network, what ports are open, what services are running, and what
+  operating system a device is running.</p>
+
+  <h2>Installing Nmap</h2>
+  <h3>Kali Linux (already installed)</h3>
+  <div class="code-block">nmap --version</div>
+
+  <h3>Ubuntu/Debian</h3>
+  <div class="code-block">sudo apt install nmap</div>
+
+  <h3>Windows</h3>
+  <p>Download the installer from <a href="https://nmap.org/download.html" target="_blank">nmap.org</a> — free.</p>
+
+  <h2>The Most Important Nmap Commands</h2>
+
+  <h3>1. Basic Port Scan</h3>
+  <div class="code-block">nmap 10.10.10.1</div>
+  <p>Checks the 1000 most common ports. Use this first on any TryHackMe machine.</p>
+
+  <h3>2. Scan All Ports</h3>
+  <div class="code-block">nmap -p- 10.10.10.1</div>
+  <p>Checks all 65,535 ports. Slower but you won't miss anything.</p>
+
+  <h3>3. Service and Version Detection</h3>
+  <div class="code-block">nmap -sV 10.10.10.1</div>
+  <p>Find out exactly what software is running on each open port.</p>
+
+  <h3>4. OS Detection</h3>
+  <div class="code-block">nmap -O 10.10.10.1</div>
+  <p>My personal favorite — tells you what operating system the target
+  is running. Knowing the OS immediately narrows down what exploits
+  might work.</p>
+
+  <h3>5. The All-in-One Scan</h3>
+  <div class="code-block">nmap -A 10.10.10.1</div>
+  <p>Combines OS detection, version detection, scripts, and traceroute.
+  Perfect for CTFs and TryHackMe rooms.</p>
+
+  <h3>6. Full Recon</h3>
+  <div class="code-block">nmap -A -p- 10.10.10.1</div>
+  <p>Complete picture of a target. Slower but thorough.</p>
+
+  <h3>7. Fast Scan</h3>
+  <div class="code-block">nmap -F 10.10.10.1</div>
+  <p>Scans only the 100 most common ports. Quick overview.</p>
+
+  <h3>8. Save Output to File</h3>
+  <div class="code-block">nmap -A 10.10.10.1 -oN results.txt</div>
+  <p>Always save your results — you'll want to refer back to them.</p>
+
+  <h2>Nmap Cheat Sheet</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Command</th><th>What it Does</th></tr>
+      <tr><td><code>nmap &lt;ip&gt;</code></td><td>Basic scan (1000 ports)</td></tr>
+      <tr><td><code>nmap -p- &lt;ip&gt;</code></td><td>Scan all 65,535 ports</td></tr>
+      <tr><td><code>nmap -sV &lt;ip&gt;</code></td><td>Service/version detection</td></tr>
+      <tr><td><code>nmap -O &lt;ip&gt;</code></td><td>OS detection</td></tr>
+      <tr><td><code>nmap -sC &lt;ip&gt;</code></td><td>Default scripts</td></tr>
+      <tr><td><code>nmap -A &lt;ip&gt;</code></td><td>All of the above combined</td></tr>
+      <tr><td><code>nmap -F &lt;ip&gt;</code></td><td>Fast scan (100 ports)</td></tr>
+      <tr><td><code>nmap -oN file.txt &lt;ip&gt;</code></td><td>Save output to file</td></tr>
+    </table>
+  </div>
+
+  <h2>My Recommended Workflow for TryHackMe</h2>
+  <p>When I start a new TryHackMe machine I always run scans in this order:</p>
+
+  <h3>Step 1 — Quick overview</h3>
+  <div class="code-block">nmap -F 10.10.10.1</div>
+
+  <h3>Step 2 — Full recon</h3>
+  <div class="code-block">nmap -A -p- 10.10.10.1 -oN full-scan.txt</div>
+
+  <div class="callout">
+    <p>This two-step approach saves time — the fast scan gives you
+    something to work with immediately while the full scan runs
+    in the background.</p>
+  </div>
+
+  <h2>Practice Nmap for Free</h2>
+  <ul>
+    <li><a href="https://tryhackme.com" target="_blank">TryHackMe</a> — dedicated Nmap room in the Jr Penetration Tester path</li>
+    <li><a href="https://hackthebox.com" target="_blank">HackTheBox</a> — Starting Point machines for recon practice</li>
+    <li><a href="https://m.do.co/c/a2644c2e88b4" target="_blank">DigitalOcean VPS</a> — $200 free credits for cloud lab</li>
+  </ul>
+
+  <div class="warning">
+    <p><strong>Legal reminder:</strong> Only scan systems you own or
+    have explicit permission to test. Always practice on TryHackMe,
+    HackTheBox, or your own lab VMs.</p>
+  </div>
+
+  <div class="disclosure">
+    All commands tested in personal lab environments and TryHackMe rooms.
+    Some links are affiliate links which help support this site at no cost to you.
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">🛡️ Cybersecurity Hub</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about">About</a>
+    <a href="how-to-get-into-cybersecurity.html">Start Here</a>
+  </div>
+  <p>Built for the cybersecurity community by a Michigan Tech CS student.</p>
+  <p style="margin-top: 8px;">Some links are affiliate links — they help support this site at no extra cost to you.</p>
+</footer>
+
+</body>
+</html>
