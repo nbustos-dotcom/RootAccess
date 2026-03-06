@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="What is a VPN and how does it work? Plain English explanation for beginners covering types, use cases, limitations, and the best free options in 2026.">
+  <title>What is a VPN? Explained for Beginners 2026 | RootAccess</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0a0e1a; color: #e0e0e0; line-height: 1.7; }
+    header { background: #0d1117; border-bottom: 1px solid #30363d; padding: 0 40px; height: 64px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .header-left h1 a { color: #58a6ff; text-decoration: none; }
+    .header-left span { color: #8b949e; font-size: 0.8rem; border-left: 1px solid #30363d; padding-left: 12px; }
+    nav { display: flex; gap: 24px; }
+    nav a { color: #8b949e; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    nav a:hover { color: #58a6ff; }
+    .article-hero { background: linear-gradient(135deg, #0d1117 0%, #161b22 60%, #0d1f3c 100%); padding: 60px 40px; border-bottom: 1px solid #30363d; }
+    .article-hero .back { color: #58a6ff; text-decoration: none; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 20px; opacity: 0.8; }
+    .article-hero .back:hover { opacity: 1; }
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; background: rgba(88,166,255,0.15); color: #58a6ff; }
+    .article-hero h1 { font-size: 2.2rem; color: #ffffff; line-height: 1.3; max-width: 780px; margin-bottom: 16px; }
+    .article-hero .meta { color: #8b949e; font-size: 0.88rem; display: flex; gap: 20px; flex-wrap: wrap; }
+    .content-wrap { max-width: 780px; margin: 0 auto; padding: 60px 40px; }
+    .content-wrap h2 { color: #ffffff; font-size: 1.4rem; margin: 48px 0 16px; padding-bottom: 10px; border-bottom: 1px solid #30363d; }
+    .content-wrap h3 { color: #e0e0e0; font-size: 1.1rem; margin: 28px 0 12px; }
+    .content-wrap p { color: #c9d1d9; margin-bottom: 16px; font-size: 0.97rem; }
+    .content-wrap ul, .content-wrap ol { color: #c9d1d9; padding-left: 24px; margin-bottom: 16px; }
+    .content-wrap li { margin-bottom: 8px; font-size: 0.97rem; }
+    .content-wrap a { color: #58a6ff; text-decoration: none; }
+    .content-wrap a:hover { text-decoration: underline; }
+    .callout { background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.25); border-left: 4px solid #58a6ff; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+    .callout p { margin: 0; color: #c9d1d9; }
+    .callout strong { color: #58a6ff; }
+    .warning { background: rgba(248,81,73,0.08); border: 1px solid rgba(248,81,73,0.25); border-left: 4px solid #f85149; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+    .warning p { margin: 0; color: #c9d1d9; }
+    .warning strong { color: #f85149; }
+    .myth { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.25); border-left: 4px solid #d2991a; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+    .myth p { margin: 0; color: #c9d1d9; }
+    .myth strong { color: #d2991a; }
+    .type-box { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 24px; margin: 16px 0; }
+    .type-box h4 { color: #58a6ff; margin-bottom: 8px; font-size: 1rem; }
+    .type-box p { color: #8b949e; font-size: 0.9rem; margin: 0; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+    .comparison-table th { background: #161b22; color: #58a6ff; padding: 12px 16px; text-align: left; font-size: 0.88rem; border: 1px solid #30363d; }
+    .comparison-table td { padding: 12px 16px; border: 1px solid #30363d; color: #c9d1d9; font-size: 0.9rem; }
+    .comparison-table tr:nth-child(even) td { background: #0d1117; }
+    .disclosure { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px 20px; margin-top: 48px; font-size: 0.82rem; color: #8b949e; }
+    footer { background: #0d1117; border-top: 1px solid #30363d; padding: 40px; text-align: center; color: #8b949e; font-size: 0.85rem; margin-top: 60px; }
+    footer .footer-brand { color: #58a6ff; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    footer a { color: #58a6ff; text-decoration: none; }
+    footer .footer-links { display: flex; justify-content: center; gap: 24px; margin: 12px 0; flex-wrap: wrap; }
+    .ask-ai-btn { position: fixed; bottom: 28px; right: 28px; background: linear-gradient(135deg, #1f6feb, #58a6ff); color: white; padding: 14px 20px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 0.9rem; box-shadow: 0 4px 24px rgba(88,166,255,0.4); z-index: 9999; display: flex; align-items: center; gap: 8px; transition: transform 0.2s, box-shadow 0.2s; }
+    .ask-ai-btn:hover { transform: scale(1.05); box-shadow: 0 6px 32px rgba(88,166,255,0.6); color: white; }
+    @media (max-width: 600px) { header { padding: 0 20px; } .article-hero { padding: 40px 20px; } .article-hero h1 { font-size: 1.6rem; } .content-wrap { padding: 40px 20px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <h1><a href="index.html">⚡ RootAccess</a></h1>
+    <span>Free resources for security learners</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<div class="article-hero">
+  <a href="index.html" class="back">← Back to all articles</a>
+  <div class="tag">Beginner</div>
+  <h1>What is a VPN? Explained for Beginners 2026</h1>
+  <div class="meta">
+    <span>👤 Nate Bustos — Michigan Tech CS Student</span>
+    <span>📅 March 2026</span>
+    <span>⏱ 7 min read</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <p>VPNs are everywhere — ads for them pop up on every YouTube video and podcast. But most people using them don't actually understand what they do, what they don't do, and when they actually matter for security. This guide cuts through the marketing and explains it clearly.</p>
+
+  <div class="callout">
+    <p><strong>Bottom line up front:</strong> A VPN (Virtual Private Network) encrypts your internet traffic and routes it through a server in another location. It hides your activity from your ISP and masks your IP address — but it is not anonymous and it does not make you unhackable.</p>
+  </div>
+
+  <h2>How a VPN Works — Simply Explained</h2>
+  <p>Normally when you visit a website, your request travels from your device → your ISP → the website. Your ISP can see every site you visit, and the website can see your real IP address.</p>
+  <p>With a VPN, your traffic goes: your device → encrypted tunnel → VPN server → website. Your ISP only sees that you're connected to a VPN server. The website sees the VPN server's IP address, not yours.</p>
+  <p>The encryption part is key — even if someone intercepts your traffic, they can't read it. This is why VPNs are genuinely useful on public Wi-Fi.</p>
+
+  <div class="myth">
+    <p><strong>⚠️ VPN myth:</strong> "A VPN makes me anonymous online." Not true. Your VPN provider can still see your traffic. If they keep logs and get a subpoena, your activity is exposed. True anonymity requires much more than a VPN.</p>
+  </div>
+
+  <h2>Types of VPNs</h2>
+
+  <div class="type-box">
+    <h4>🔹 Remote Access VPN</h4>
+    <p>What most consumers use. You connect to a VPN server run by a provider like NordVPN or Mullvad. Your traffic is encrypted and your IP is masked. Great for public Wi-Fi and bypassing geo-restrictions.</p>
+  </div>
+
+  <div class="type-box">
+    <h4>🔹 Site-to-Site VPN</h4>
+    <p>Used by businesses to connect multiple office locations securely over the internet. Instead of individual users connecting, entire networks are linked together. Common in enterprise environments you'll encounter in cybersecurity work.</p>
+  </div>
+
+  <div class="type-box">
+    <h4>🔹 SSL/TLS VPN</h4>
+    <p>Runs through a web browser using HTTPS. No software install needed. Common for corporate remote access where employees need to connect to internal resources from home.</p>
+  </div>
+
+  <div class="type-box">
+    <h4>🔹 WireGuard vs OpenVPN</h4>
+    <p>These are VPN protocols — the technical standard the VPN uses. WireGuard is modern, fast, and becoming the new standard. OpenVPN is older but battle-tested. Most good VPN providers now offer both.</p>
+  </div>
+
+  <h2>When a VPN Actually Helps</h2>
+  <ul>
+    <li><strong>Public Wi-Fi</strong> — coffee shops, airports, hotels. Encrypts your traffic from anyone snooping on the same network</li>
+    <li><strong>Hiding activity from your ISP</strong> — your internet provider can't see what sites you visit</li>
+    <li><strong>Bypassing geo-restrictions</strong> — accessing content available in other countries</li>
+    <li><strong>Remote work</strong> — securely accessing your company's internal network from home</li>
+    <li><strong>Pentest labs</strong> — some people use VPNs when connecting to lab environments like HackTheBox</li>
+  </ul>
+
+  <h2>When a VPN Does NOT Help</h2>
+  <ul>
+    <li><strong>Malware on your device</strong> — a VPN doesn't stop viruses or ransomware already on your machine</li>
+    <li><strong>Phishing attacks</strong> — clicking a malicious link is just as dangerous through a VPN</li>
+    <li><strong>Account tracking</strong> — if you're logged into Google or Facebook, they track you regardless of your IP</li>
+    <li><strong>Legal anonymity</strong> — VPN providers can be compelled to hand over logs</li>
+    <li><strong>HTTPS sites</strong> — traffic to HTTPS sites is already encrypted, a VPN adds a second layer but isn't required</li>
+  </ul>
+
+  <div class="warning">
+    <p><strong>Free VPNs are risky.</strong> If the VPN is free, you're often the product. Many free VPN providers log and sell your browsing data — the exact opposite of what you want. Stick to reputable paid providers or Proton VPN's free tier.</p>
+  </div>
+
+  <h2>Best VPN Options in 2026</h2>
+  <table class="comparison-table">
+    <tr>
+      <th>VPN</th>
+      <th>Price</th>
+      <th>Best For</th>
+    </tr>
+    <tr>
+      <td>Mullvad</td>
+      <td>~$5/mo</td>
+      <td>Privacy focused, no accounts needed</td>
+    </tr>
+    <tr>
+      <td>Proton VPN</td>
+      <td>Free tier available</td>
+      <td>Beginners, free option is trustworthy</td>
+    </tr>
+    <tr>
+      <td>NordVPN</td>
+      <td>~$3–5/mo</td>
+      <td>Everyday use, fast speeds</td>
+    </tr>
+    <tr>
+      <td>Tailscale</td>
+      <td>Free for personal</td>
+      <td>Connecting your own devices / home lab</td>
+    </tr>
+  </table>
+
+  <p>For beginners, <strong>Proton VPN's free tier</strong> is the safest starting point. It's run by the same team behind ProtonMail, has a strict no-logs policy, and the free version is genuinely usable — not crippled like most free VPNs.</p>
+
+  <h2>VPNs in Cybersecurity Work</h2>
+  <p>As you get deeper into cybersecurity you'll encounter VPNs constantly:</p>
+  <ul>
+    <li><strong>HackTheBox</strong> requires you to connect via OpenVPN to access their lab machines</li>
+    <li><strong>Corporate SOC work</strong> — remote analysts connect to the company network via VPN</li>
+    <li><strong>Penetration testing</strong> — pentesters sometimes route traffic through VPNs during engagements</li>
+    <li><strong>Home labs</strong> — Tailscale makes it easy to securely access your home lab from anywhere</li>
+  </ul>
+
+  <p>Understanding how VPNs work also helps you understand how attackers abuse them. Many threat actors use commercial VPN services to mask their origin during attacks — something you'll see in threat intelligence reports as a <a href="what-is-a-soc-analyst.html">SOC Analyst</a>.</p>
+
+  <h2>VPNs and the CompTIA Security+ Exam</h2>
+  <p>VPNs are a tested topic on <a href="comptia-security-plus-study-guide.html">CompTIA Security+</a>. You'll need to know the difference between remote access VPNs and site-to-site VPNs, common protocols like IPSec, SSL/TLS, and WireGuard, and split tunneling concepts. Make sure you understand these before exam day.</p>
+
+  <h2>Final Thoughts</h2>
+  <p>A VPN is a useful tool but it's not a magic privacy shield. Use one on public Wi-Fi, use Proton VPN's free tier to get started, and understand its limitations before trusting it for anything sensitive. As you get into cybersecurity deeper, you'll use VPNs regularly — especially for lab environments like HackTheBox.</p>
+
+  <div class="callout">
+    <p><strong>Your next step:</strong> Download <strong>Proton VPN</strong> for free and enable it next time you're on public Wi-Fi. Then check out the <a href="how-to-get-into-cybersecurity.html">beginner roadmap</a> to keep building your skills.</p>
+  </div>
+
+  <div class="disclosure">
+    <strong>Disclosure:</strong> Some links on this page may be affiliate links. I may earn a small commission if you sign up through them, at no extra cost to you. I only recommend tools I genuinely think are worth it.
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">⚡ RootAccess</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="how-to-get-into-cybersecurity.html">Start Here</a>
+  </div>
+  <p>Built for the cybersecurity community by a Michigan Tech CS student.</p>
+  <p style="margin-top: 8px;">Some links are affiliate links — they help support this site at no extra cost to you.</p>
+</footer>
+
+<a href="https://claude.ai" target="_blank" class="ask-ai-btn">⚡ Ask AI</a>
+
+</body>
+</html>
