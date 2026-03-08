@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free CompTIA Security+ cheat sheet — one-page reference covering every major exam domain. Download and study for free from RootAccess.">
+  <title>Free Security+ Cheat Sheet 2026 | RootAccess</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0a0e1a; color: #e0e0e0; line-height: 1.7; }
+    header { background: #0d1117; border-bottom: 1px solid #30363d; padding: 0 40px; height: 64px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .header-left h1 a { color: #58a6ff; text-decoration: none; }
+    .header-left span { color: #8b949e; font-size: 0.8rem; border-left: 1px solid #30363d; padding-left: 12px; }
+    nav { display: flex; gap: 24px; }
+    nav a { color: #8b949e; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    nav a:hover { color: #58a6ff; }
+    .hero { background: linear-gradient(135deg, #0d1117 0%, #161b22 60%, #0d1f3c 100%); padding: 60px 40px; border-bottom: 1px solid #30363d; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(188,77,252,0.1); border: 1px solid rgba(188,77,252,0.3); color: #bc4dfc; font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px; }
+    .hero h1 { font-size: 2.4rem; color: #ffffff; margin-bottom: 16px; line-height: 1.2; }
+    .hero p { font-size: 1.05rem; color: #8b949e; max-width: 560px; margin: 0 auto 32px; }
+    .signup-box { background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.3); border-radius: 12px; padding: 28px 36px; max-width: 500px; margin: 0 auto; }
+    .signup-box p { color: #c9d1d9; font-size: 0.9rem; margin-bottom: 16px; }
+    .signup-form { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .signup-form input[type="email"] { flex: 1; min-width: 220px; background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 12px 16px; color: #e0e0e0; font-size: 0.95rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
+    .signup-form input[type="email"]:focus { border-color: #58a6ff; }
+    .signup-form button { background: linear-gradient(135deg, #1f6feb, #58a6ff); color: white; border: none; border-radius: 8px; padding: 12px 24px; font-size: 0.9rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: filter 0.2s; white-space: nowrap; }
+    .signup-form button:hover { filter: brightness(1.15); }
+    .signup-note { color: #8b949e; font-size: 0.78rem; margin-top: 10px; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 60px 40px; }
+    .preview-label { color: #8b949e; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 24px; text-align: center; }
+    .cheat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .domain { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; }
+    .domain-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #30363d; }
+    .domain-num { background: rgba(88,166,255,0.15); color: #58a6ff; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+    .domain h3 { color: #ffffff; font-size: 1rem; }
+    .domain ul { list-style: none; padding: 0; }
+    .domain ul li { color: #c9d1d9; font-size: 0.85rem; padding: 5px 0; border-bottom: 1px solid rgba(48,54,61,0.5); display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .domain ul li:last-child { border-bottom: none; }
+    .domain ul li span { color: #8b949e; font-size: 0.8rem; text-align: right; flex-shrink: 0; }
+    .ports-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    .ports-table td { padding: 5px 0; font-size: 0.85rem; border-bottom: 1px solid rgba(48,54,61,0.5); color: #c9d1d9; }
+    .ports-table td:first-child { color: #58a6ff; font-weight: 600; width: 56px; }
+    .ports-table tr:last-child td { border-bottom: none; }
+    .acronym-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; }
+    .acronym-grid dt { color: #58a6ff; font-size: 0.82rem; font-weight: 700; }
+    .acronym-grid dd { color: #8b949e; font-size: 0.82rem; margin: 0 0 6px 0; }
+    .footer-cta { background: linear-gradient(135deg, rgba(88,166,255,0.08), rgba(88,166,255,0.04)); border: 1px solid rgba(88,166,255,0.25); border-radius: 12px; padding: 40px; text-align: center; margin-top: 48px; }
+    .footer-cta h2 { color: #ffffff; margin-bottom: 10px; }
+    .footer-cta p { color: #8b949e; margin-bottom: 24px; }
+    footer { background: #0d1117; border-top: 1px solid #30363d; padding: 40px; text-align: center; color: #8b949e; font-size: 0.85rem; margin-top: 60px; }
+    footer .footer-brand { color: #58a6ff; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    footer a { color: #58a6ff; text-decoration: none; }
+    footer .footer-links { display: flex; justify-content: center; gap: 24px; margin: 12px 0; flex-wrap: wrap; }
+    @media (max-width: 700px) { .cheat-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 1.7rem; } .wrap { padding: 40px 20px; } header { padding: 0 20px; } }
+    @media print { header, .hero .signup-box, .footer-cta, footer { display: none; } body { background: #fff; color: #000; } .domain { border: 1px solid #ccc; background: #fff; } .domain h3, .domain ul li { color: #000; } .domain-num { background: #eee; color: #333; } .domain ul li span { color: #555; } .ports-table td { color: #000; } .ports-table td:first-child { color: #1f6feb; } .acronym-grid dt { color: #1f6feb; } .acronym-grid dd { color: #555; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <h1><a href="index.html">⚡ RootAccess</a></h1>
+    <span>Free resources for security learners</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-badge">🎓 Free Study Resource</div>
+  <h1>Security+ Cheat Sheet</h1>
+  <p>Every major exam domain on one page. Print it, study it, pass the exam.</p>
+
+  <div class="signup-box">
+    <p>Enter your email and get this cheat sheet plus future study resources delivered free.</p>
+    <form action="MAILCHIMP_ACTION_URL" method="post" target="_blank" class="signup-form">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required>
+      <button type="submit">Get the Cheat Sheet →</button>
+    </form>
+    <p class="signup-note">No spam. Unsubscribe anytime.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <p class="preview-label">👇 Preview — full reference below</p>
+
+  <div class="cheat-grid">
+
+    <div class="domain">
+      <div class="domain-header">
+        <span class="domain-num">Domain 1 — 12%</span>
+        <h3>General Security Concepts</h3>
+      </div>
+      <ul>
+        <li>CIA Triad <span>Confidentiality, Integrity, Availability</span></li>
+        <li>AAA <span>Authentication, Authorization, Accounting</span></li>
+        <li>Zero Trust <span>Never trust, always verify</span></li>
+        <li>Defense in Depth <span>Layered security controls</span></li>
+        <li>Least Privilege <span>Minimum access needed</span></li>
+        <li>Separation of Duties <span>No single point of control</span></li>
+        <li>Security Control Types <span>Technical, Admin, Physical</span></li>
+        <li>Control Functions <span>Preventive, Detective, Corrective, Deterrent</span></li>
+      </ul>
+    </div>
+
+    <div class="domain">
+      <div class="domain-header">
+        <span class="domain-num">Domain 2 — 22%</span>
+        <h3>Threats, Vulnerabilities & Mitigations</h3>
+      </div>
+      <ul>
+        <li>Malware types <span>Virus, Worm, Trojan, Ransomware, Rootkit, Spyware</span></li>
+        <li>Social Engineering <span>Phishing, Vishing, Smishing, Pretexting, Baiting</span></li>
+        <li>Password Attacks <span>Brute force, Dictionary, Spraying, Credential stuffing</span></li>
+        <li>MitM / On-Path <span>Intercepts communication between parties</span></li>
+        <li>SQL Injection <span>Malicious SQL via input fields</span></li>
+        <li>XSS <span>Inject scripts into trusted sites</span></li>
+        <li>CSRF <span>Force authenticated user actions</span></li>
+        <li>Buffer Overflow <span>Overwrite memory to execute code</span></li>
+        <li>Zero-Day <span>Exploit before patch exists</span></li>
+        <li>Insider Threat <span>Malicious or negligent internal user</span></li>
+      </ul>
+    </div>
+
+    <div class="domain">
+      <div class="domain-header">
+        <span class="domain-num">Domain 3 — 18%</span>
+        <h3>Security Architecture</h3>
+      </div>
+      <ul>
+        <li>DMZ <span>Buffer zone between public and internal network</span></li>
+        <li>VLAN <span>Logical network segmentation</span></li>
+        <li>NAT <span>Maps private IPs to public IPs</span></li>
+        <li>Firewall types <span>Packet filter, Stateful, NGFW, Proxy</span></li>
+        <li>IDS vs IPS <span>IDS detects only; IPS detects + blocks</span></li>
+        <li>Proxy Server <span>Intermediary between client and internet</span></li>
+        <li>Load Balancer <span>Distributes traffic across servers</span></li>
+        <li>Honeypot <span>Decoy system to attract attackers</span></li>
+        <li>Air Gap <span>Physically isolated network</span></li>
+        <li>SD-WAN <span>Software-defined wide area network</span></li>
+      </ul>
+    </div>
+
+    <div class="domain">
+      <div class="domain-header">
+        <span class="domain-num">Domain 4 — 28%</span>
+        <h3>Security Operations</h3>
+      </div>
+      <ul>
+        <li>Incident Response <span>Prepare → Identify → Contain → Eradicate → Recover → Lessons</span></li>
+        <li>SIEM <span>Aggregates and correlates security logs</span></li>
+        <li>EDR <span>Endpoint detection and response</span></li>
+        <li>Vulnerability Scan <span>Non-intrusive; identifies known weaknesses</span></li>
+        <li>Penetration Test <span>Authorized simulated attack</span></li>
+        <li>Digital Forensics <span>Order of volatility; chain of custody</span></li>
+        <li>Log Management <span>Collection, retention, analysis</span></li>
+        <li>Change Management <span>Documented, approved system changes</span></li>
+        <li>Identity & Access <span>MFA, SSO, PAM, RBAC, ABAC</span></li>
+        <li>Data Loss Prevention <span>DLP monitors and blocks data exfil</span></li>
+      </ul>
+    </div>
+
+    <div class="domain">
+      <div class="domain-header">
+        <span class="domain-num">Domain 5 — 20%</span>
+        <h3>Security Program Management</h3>
+      </div>
+      <ul>
+        <li>Risk Terminology <span>Threat × Vulnerability × Impact = Risk</span></li>
+        <li>Risk Treatments <span>Accept, Transfer, Avoid, Mitigate</span></li>
+        <li>BCP / DRP <span>Business continuity and disaster recovery</span></li>
+        <li>RTO / RPO <span>Recovery time and point objectives</span></li>
+        <li>Data Classifications <span>Public, Internal, Confidential, Restricted</span></li>
+        <li>Regulations <span>GDPR, HIPAA, PCI-DSS, SOX, FERPA</span></li>
+        <li>Security Awareness <span>Training, phishing simulations, policies</span></li>
+        <li>Vendor Management <span>Third-party risk, supply chain security</span></li>
+      </ul>
+    </div>
+
+    <div class="domain">
+      <div class="domain-header">
+        <span class="domain-num">Quick Reference</span>
+        <h3>Must-Know Ports</h3>
+      </div>
+      <table class="ports-table">
+        <tr><td>20/21</td><td>FTP (data / control)</td></tr>
+        <tr><td>22</td><td>SSH / SFTP / SCP</td></tr>
+        <tr><td>23</td><td>Telnet (insecure)</td></tr>
+        <tr><td>25</td><td>SMTP (email send)</td></tr>
+        <tr><td>53</td><td>DNS</td></tr>
+        <tr><td>67/68</td><td>DHCP (server / client)</td></tr>
+        <tr><td>80</td><td>HTTP</td></tr>
+        <tr><td>110</td><td>POP3</td></tr>
+        <tr><td>143</td><td>IMAP</td></tr>
+        <tr><td>443</td><td>HTTPS / SSL/TLS</td></tr>
+        <tr><td>445</td><td>SMB / Windows shares</td></tr>
+        <tr><td>3389</td><td>RDP</td></tr>
+        <tr><td>1433</td><td>MS SQL Server</td></tr>
+        <tr><td>3306</td><td>MySQL</td></tr>
+      </table>
+    </div>
+
+    <div class="domain">
+      <div class="domain-header">
+        <span class="domain-num">Quick Reference</span>
+        <h3>Cryptography Essentials</h3>
+      </div>
+      <ul>
+        <li>Symmetric <span>Same key to encrypt/decrypt. AES, 3DES. Fast.</span></li>
+        <li>Asymmetric <span>Public/private key pair. RSA, ECC. Slower.</span></li>
+        <li>Hashing <span>One-way. MD5 (broken), SHA-256, SHA-3</span></li>
+        <li>Digital Signature <span>Sign with private key, verify with public</span></li>
+        <li>PKI / CA <span>Certificate authorities issue/validate certs</span></li>
+        <li>TLS Handshake <span>Negotiate cipher → exchange keys → encrypt</span></li>
+        <li>Key Exchange <span>Diffie-Hellman, ECDH</span></li>
+        <li>Salting <span>Random data added before hashing passwords</span></li>
+      </ul>
+    </div>
+
+    <div class="domain">
+      <div class="domain-header">
+        <span class="domain-num">Quick Reference</span>
+        <h3>Key Acronyms</h3>
+      </div>
+      <dl class="acronym-grid">
+        <dt>ACL</dt><dd>Access Control List</dd>
+        <dt>APT</dt><dd>Advanced Persistent Threat</dd>
+        <dt>BYOD</dt><dd>Bring Your Own Device</dd>
+        <dt>CVE</dt><dd>Common Vulnerabilities & Exposures</dd>
+        <dt>CVSS</dt><dd>Common Vulnerability Scoring System</dd>
+        <dt>FIM</dt><dd>File Integrity Monitoring</dd>
+        <dt>HIDS</dt><dd>Host-based Intrusion Detection</dd>
+        <dt>IOC</dt><dd>Indicator of Compromise</dd>
+        <dt>MFA</dt><dd>Multi-Factor Authentication</dd>
+        <dt>MTTR</dt><dd>Mean Time to Repair</dd>
+        <dt>NAC</dt><dd>Network Access Control</dd>
+        <dt>OSINT</dt><dd>Open Source Intelligence</dd>
+        <dt>PAM</dt><dd>Privileged Access Management</dd>
+        <dt>RBAC</dt><dd>Role-Based Access Control</dd>
+        <dt>SOAR</dt><dd>Security Orchestration & Automated Response</dd>
+        <dt>SOC</dt><dd>Security Operations Center</dd>
+        <dt>SSID</dt><dd>Service Set Identifier (Wi-Fi name)</dd>
+        <dt>TTPs</dt><dd>Tactics, Techniques & Procedures</dd>
+      </dl>
+    </div>
+
+  </div>
+
+  <div class="footer-cta">
+    <h2>📬 Want More Free Study Resources?</h2>
+    <p>Join the RootAccess newsletter and get new guides, cheat sheets, and tool recommendations delivered free.</p>
+    <form action="MAILCHIMP_ACTION_URL" method="post" target="_blank" class="signup-form" style="justify-content:center;">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required>
+      <button type="submit">Subscribe Free →</button>
+    </form>
+    <p class="signup-note" style="margin-top:12px;">No spam. Unsubscribe anytime.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">⚡ RootAccess</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="how-to-get-into-cybersecurity.html">Start Here</a>
+  </div>
+  <p>Built for the cybersecurity community by a Michigan Tech CS student.</p>
+</footer>
+
+</body>
+</html>
