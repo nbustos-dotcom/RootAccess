@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Nmap beginner guide 2026. The most important commands for CTFs and pentesting with a full cheat sheet.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="RootAccess">
+  <meta property="og:title" content="Nmap Beginner Guide 2026">
+  <meta property="og:description" content="Nmap beginner guide 2026. The most important commands for CTFs and pentesting with a full cheat sheet.">
+  <link rel="canonical" href="https://nbustos-dotcom.github.io/RootAccess/nmap-beginner-guide.html">
   <title>Nmap Beginner Guide 2026 | RootAccess</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', sans-serif; background: #0a0e1a; color: #e0e0e0; line-height: 1.7; }
     header { background: #0d1117; border-bottom: 1px solid #30363d; padding: 0 40px; height: 64px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
     .header-left { display: flex; align-items: center; gap: 12px; }
-    .header-left a { text-decoration: none; }
-    .header-left h1 { color: #58a6ff; font-size: 1.3rem; }
+    .header-left h1 a { color: #58a6ff; text-decoration: none; }
     .header-left span { color: #8b949e; font-size: 0.8rem; border-left: 1px solid #30363d; padding-left: 12px; }
     nav { display: flex; gap: 24px; }
     nav a { color: #8b949e; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
@@ -39,9 +43,9 @@
     .callout { background: rgba(88,166,255,0.07); border: 1px solid rgba(88,166,255,0.25); border-left: 4px solid #58a6ff; border-radius: 6px; padding: 20px 24px; margin: 28px 0; }
     .callout p { margin: 0; color: #c9d1d9; }
     .callout strong { color: #58a6ff; }
-    .warning { background: rgba(248,81,73,0.07); border: 1px solid rgba(248,81,73,0.25); border-left: 4px solid #f85149; border-radius: 6px; padding: 20px 24px; margin: 28px 0; }
+    .warning { background: rgba(210,153,34,0.07); border: 1px solid rgba(210,153,34,0.25); border-left: 4px solid #d2991a; border-radius: 6px; padding: 20px 24px; margin: 28px 0; }
     .warning p { margin: 0; color: #c9d1d9; }
-    .warning strong { color: #f85149; }
+    .warning strong { color: #d2991a; }
     .disclosure { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 16px 20px; margin-top: 48px; font-size: 0.83rem; color: #8b949e; }
     .back-link { display: inline-flex; align-items: center; gap: 6px; color: #8b949e; text-decoration: none; font-size: 0.88rem; margin-bottom: 40px; transition: color 0.2s; }
     .back-link:hover { color: #58a6ff; }
@@ -51,18 +55,20 @@
     .footer-links a { color: #58a6ff; text-decoration: none; }
     .footer-links a:hover { text-decoration: underline; }
     @media (max-width: 600px) { header { padding: 0 20px; } .header-left span { display: none; } .article-hero { padding: 40px 20px; } .article-hero h1 { font-size: 1.6rem; } .article-container { padding: 40px 20px; } }
+    .ask-ai-btn { position: fixed; bottom: 28px; right: 28px; background: linear-gradient(135deg, #1f6feb, #58a6ff); color: white; padding: 14px 20px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 0.9rem; box-shadow: 0 4px 24px rgba(88,166,255,0.4); z-index: 9999; display: flex; align-items: center; gap: 8px; transition: transform 0.2s, box-shadow 0.2s; }
+    .ask-ai-btn:hover { transform: scale(1.05); box-shadow: 0 6px 32px rgba(88,166,255,0.6); color: white; }
   </style>
 </head>
 <body>
 
 <header>
   <div class="header-left">
-    <a href="index.html"><h1>⚡ RootAccess</h1></a>
+    <h1><a href="index.html">⚡ RootAccess</a></h1>
     <span>Free resources for security learners</span>
   </div>
   <nav>
     <a href="index.html">Home</a>
-    <a href="about">About</a>
+    <a href="about.html">About</a>
   </nav>
 </header>
 
@@ -177,16 +183,15 @@
   </div>
 
   <div class="disclosure">
-    All commands tested in personal lab environments and TryHackMe rooms.
-    Some links are affiliate links which help support this site at no cost to you.
-  </div>
+  <strong>Disclosure:</strong> Some links on this page may be affiliate links. I may earn a small commission if you sign up through them, at no extra cost to you. I only recommend tools I genuinely think are worth it.
+</div>
 </div>
 
 <footer>
   <div class="footer-brand">⚡ RootAccess</div>
   <div class="footer-links">
     <a href="index.html">Home</a>
-    <a href="about">About</a>
+    <a href="about.html">About</a>
     <a href="how-to-get-into-cybersecurity.html">Start Here</a>
   </div>
   <p>Built for the cybersecurity community by a Michigan Tech CS student.</p>
