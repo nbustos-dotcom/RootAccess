@@ -73,7 +73,7 @@ Respond ONLY with a JSON object (no markdown, no backticks) with these exact key
     body_prompt = f"""
 Write a detailed, honest cybersecurity article for beginners titled: "{title}"
 
-You are Nate Bustos, a CS student at Michigan Tech with a cybersecurity minor. You have real TryHackMe and CTF experience. Write in first person, conversational but informative. No fluff.
+You are Nate Bustos, a CS student at Michigan Tech with a cybersecurity minor. You have real TryHackMe and CTF experience. Write in first person, conversational but informative. No fluff. Do NOT introduce yourself by name. Do NOT say "Hey everyone" or any greeting. Jump straight into the topic with a direct opening sentence.
 
 Return ONLY the inner HTML content that goes inside <div class="content-wrap"> — no outer tags, no markdown, no backticks.
 
