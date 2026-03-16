@@ -8,7 +8,7 @@ from datetime import datetime
 
 # ============================================================
 # PASTE YOUR GEMINI API KEY HERE
-API_KEY = "AIzaSyCOTaTsmeIyDo2Ol94B73iV61-3Vin6RMs"
+API_KEY = "AIzaSyBxG3pKsdCRuOjJbcA4SJfi2lfxvHBbcug"
 # ============================================================
 
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
