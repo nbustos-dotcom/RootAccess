@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ready to begin bug bounty hunting in 2026? This guide covers essential steps, tools, and resources for beginners to kickstart their journey into ethical hacking.">
+  <link rel="canonical" href="https://nbustos-dotcom.github.io/RootAccess/how-to-start-bug-bounty-2026.html" />
+  <title>How to Start Bug Bounty Hunting as a Beginner in 2026 | RootAccess</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0a0e1a; color: #e0e0e0; line-height: 1.7; }
+    header { background: #0d1117; border-bottom: 1px solid #30363d; padding: 0 40px; height: 64px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .header-left a { text-decoration: none; }
+    .header-left h1 { color: #58a6ff; font-size: 1.3rem; }
+    .header-left span { color: #8b949e; font-size: 0.8rem; border-left: 1px solid #30363d; padding-left: 12px; }
+    nav { display: flex; gap: 24px; }
+    nav a { color: #8b949e; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    nav a:hover { color: #58a6ff; }
+    .article-hero { background: linear-gradient(135deg, #0d1117 0%, #161b22 60%, #0d1f3c 100%); padding: 60px 40px; border-bottom: 1px solid #30363d; text-align: center; }
+    .article-hero .back { color: #58a6ff; text-decoration: none; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 20px; opacity: 0.8; }
+    .article-hero .back:hover { opacity: 1; }
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+    .tag-beginner { background: rgba(35,134,54,0.15); color: #3fb950; }
+    .tag-tutorial { background: rgba(35,134,54,0.15); color: #3fb950; }
+    .tag-comparison { background: rgba(88,166,255,0.15); color: #58a6ff; }
+    .tag-career { background: rgba(210,153,34,0.15); color: #d2991a; }
+    .tag-certification { background: rgba(188,77,252,0.15); color: #bc4dfc; }
+    .tag-ctf { background: rgba(248,81,73,0.15); color: #f85149; }
+    .tag-lab { background: rgba(210,153,34,0.15); color: #d2991a; }
+    .tag-resources { background: rgba(88,166,255,0.15); color: #58a6ff; }
+    .article-hero h1 { font-size: 2.2rem; color: #ffffff; line-height: 1.3; max-width: 780px; margin: 0 auto 16px; text-align: center; }
+    .article-hero .meta { color: #8b949e; font-size: 0.88rem; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .content-wrap { max-width: 780px; margin: 0 auto; padding: 60px 40px; }
+    .content-wrap h2 { color: #ffffff; font-size: 1.4rem; margin: 48px 0 16px; padding-bottom: 10px; border-bottom: 1px solid #30363d; }
+    .content-wrap h3 { color: #e0e0e0; font-size: 1.1rem; margin: 28px 0 12px; }
+    .content-wrap p { color: #c9d1d9; margin-bottom: 16px; font-size: 0.97rem; }
+    .content-wrap ul, .content-wrap ol { color: #c9d1d9; padding-left: 24px; margin-bottom: 16px; }
+    .content-wrap li { margin-bottom: 8px; font-size: 0.97rem; }
+    .content-wrap a { color: #58a6ff; text-decoration: none; }
+    .content-wrap a:hover { text-decoration: underline; }
+    .callout { background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.25); border-left: 4px solid #58a6ff; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+    .callout p { margin: 0; color: #c9d1d9; }
+    .callout strong { color: #58a6ff; }
+    .warning { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.25); border-left: 4px solid #d2991a; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+    .warning p { margin: 0; color: #c9d1d9; }
+    .warning strong { color: #d2991a; }
+    .disclosure { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px 20px; margin-top: 48px; font-size: 0.82rem; color: #8b949e; }
+    footer { background: #0d1117; border-top: 1px solid #30363d; padding: 40px; text-align: center; color: #8b949e; font-size: 0.85rem; margin-top: 60px; }
+    footer .footer-brand { color: #58a6ff; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    footer a { color: #58a6ff; text-decoration: none; }
+    footer .footer-links { display: flex; justify-content: center; gap: 24px; margin: 12px 0; flex-wrap: wrap; }
+    @media (max-width: 600px) { header { padding: 0 20px; } .header-left span { display: none; } .article-hero { padding: 40px 20px; } .article-hero h1 { font-size: 1.6rem; } .content-wrap { padding: 40px 20px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <a href="index.html"><h1>⚡ RootAccess</h1></a>
+    <span>Free resources for security learners</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<div class="article-hero">
+  <a href="index.html" class="back">← Back to all articles</a>
+  <div class="tag tag-career">Career</div>
+  <h1>How to Start Bug Bounty Hunting as a Beginner in 2026</h1>
+  <div class="meta">
+    <span>👤 Nate Bustos — Michigan Tech CS Student</span>
+    <span>📅 March 2026</span>
+    <span>⏱ 10 min read</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+<p>Bug bounty hunting in 2026 isn't about finding a magic "one-click" exploit for a quick payout; it's a rigorous, rewarding journey that requires dedication to learning and an insatiable curiosity for how things break. If you're a beginner looking to get started, understand this upfront: it's not a get-rich-quick scheme. It's a skill you develop, hone, and continually update.</p>
+
+<div class="warning">
+  <p><strong>Reality check:</strong> The barrier to entry for simply finding a bug is low, but the barrier to finding <strong>impactful, unique, and well-paid bugs</strong> is much higher. Don't expect to earn a living wage immediately, or even for months. Treat it as a learning experience with potential monetary rewards.</p>
+</div>
+
+<h2>What is Bug Bounty Hunting, Anyway?</h2>
+<p>At its core, bug bounty hunting is the practice of ethically discovering vulnerabilities in applications, websites, and infrastructure, and reporting them to the organization that owns them, in exchange for a reward (the "bounty"). These organizations pay hackers to find flaws before malicious actors do, turning potential security incidents into learning opportunities.</p>
+<p>In 2026, the landscape is more mature. Automation is more prevalent, meaning simple, well-known vulnerabilities are often caught by scanners. This pushes hunters to think more creatively and deeply about business logic flaws, complex chained exploits, and novel attack vectors. But don't let that intimidate you; the fundamentals remain the same, and those are what you'll master first.</p>
+
+<h2>The Foundational Skills You Absolutely Need</h2>
+<p>Before you even think about signing up for a bug bounty platform, you need a solid technical bedrock. Trying to skip these steps is like trying to build a skyscraper without a foundation – it’s just going to collapse.</p>
+
+<h3>1. Networking Fundamentals</h3>
+<ul>
+  <li><strong>How the Internet Works:</strong> Understand TCP/IP, DNS, HTTP/S. What are requests and responses? How do clients and servers communicate?</li>
+  <li><strong>Proxies:</strong> Especially HTTP proxies. This is critical for intercepting and manipulating web traffic.</li>
+  <li><strong>Ports and Services:</strong> What are common ports (80, 443, 22, 21, 23, etc.) and what services typically run on them?</li>
+</ul>
+
+<h3>2. Web Technologies</h3>
+<p>The vast majority of bug bounties are focused on web applications. You need to understand how they’re built.</p>
+<ul>
+  <li><strong>HTML, CSS, JavaScript:</strong> You don't need to be a full-stack developer, but you need to read and understand code snippets, how the DOM works, and how client-side scripts behave.</li>
+  <li><strong>Common Web Frameworks:</strong> Familiarity with concepts behind popular frameworks like React, Angular, Vue, or even older ones like jQuery, will help you understand how different components interact.</li>
+  <li><strong>APIs:</strong> Understand REST and GraphQL APIs. Many modern applications are essentially a collection of APIs, and these are ripe for exploitation.</li>
+</ul>
+
+<h3>3. Operating Systems</h3>
+<p>You'll primarily be working with Linux for your hacking toolkit.</p>
+<ul>
+  <li><strong>Linux Command Line:</strong> This is non-negotiable. Learn basic commands for file manipulation, process management, networking, and scripting. My time in CTFs really hammered home how essential the command line is.</li>
+  <li><strong>Windows Basics:</strong> Understand Windows file systems, user permissions, and services, as you might encounter these in some targets.</li>
+</ul>
+
+<h3>4. Programming/Scripting</h3>
+<p>You don't need to be a coding guru, but you need to be able to read code and write small scripts.</p>
+<ul>
+  <li><strong>Python:</strong> Hands down, the best language to start with. It's incredibly versatile for automating tasks, parsing data, and writing proof-of-concept exploits.</li>
+  <li><strong>JavaScript:</strong> Understanding JavaScript is crucial for web hacking, especially for XSS and DOM-based vulnerabilities.</li>
+</ul>
+
+<h3>5. Cybersecurity Fundamentals & Common Vulnerabilities</h3>
+<ul>
+  <li><strong>OWASP Top 10:</strong> Memorize it. Understand each category in depth. This is your bible for web application security.</li>
+  <li><strong>Common Attack Vectors:</strong> SQL Injection, Cross-Site Scripting (XSS), Broken Access Control, Insecure Direct Object References (IDOR), Server-Side Request Forgery (SSRF), XML External Entity (XXE), etc.</li>
+</ul>
+
+<div class="callout">
+  <p><strong>Key Takeaway:</strong> Don't rush into bug bounty platforms without building these fundamental skills. It's a marathon, not a sprint.</p>
+</div>
+
+<h2>Building Your Skills: Where to Learn in 2026</h2>
+<p>There are incredible resources out there, many of them free or very affordable. Here's what I recommend based on my own learning journey.</p>
+
+<h3>1. Online Learning Platforms</h3>
+<ul>
+  <li><strong>PortSwigger Web Security Academy:</strong> This is <strong>essential</strong> for web hacking. It's free, comprehensive, and comes directly from the makers of Burp Suite. It covers the OWASP Top 10 and many other web vulnerabilities with interactive labs. I can't stress this enough – spend significant time here.</li>
+  <li><strong>TryHackMe & Hack The Box:</strong> These are fantastic for hands-on learning. I've spent countless hours on TryHackMe doing paths like "Jr. Penetration Tester" and "Web Fundamentals." They gamify the learning process and give you real-world command-line experience with vulnerable machines. Hack The Box is similar but often a step up in difficulty, great for when you feel more confident.</li>
+  <li><strong>FreeCodeCamp / Codecademy:</strong> For brushing up on your HTML, CSS, JavaScript, and Python basics, these platforms offer excellent interactive courses.</li>
+  <li><strong>YouTube:</strong> Channels like LiveOverflow, STOK, The Hackerish, and PwnFunction offer amazing insights into real-world exploits and bug bounty tips. Watch their "recon," "bug hunting," or "how to find XSS" videos.</li>
+</ul>
+
+<h3>2. Capture The Flag (CTF) Competitions</h3>
+<p>CTFs are amazing for practicing your skills in a controlled, competitive environment. They cover categories like web exploitation, forensics, reverse engineering, cryptography, and more. While not directly bug bounty, they build problem-solving skills, teach you to think like an attacker, and expose you to various tools and techniques. My CTF experience has been invaluable in teaching me how to break down complex problems.</p>
+
+<h3>3. Documentation & Reading</h3>
+<ul>
+  <li><strong>Read the Manual (RTFM):</strong> Seriously. When you learn a new tool, read its documentation.</li>
+  <li><strong>Vendor Documentation:</strong> Understanding how specific web servers (Apache, Nginx), databases (MySQL, PostgreSQL), or frameworks are designed can reveal common misconfigurations.</li>
+  <li><strong>Bug Bounty Write-ups:</strong> Read successful bug reports on HackerOne's "HackerOne Hacktivity" or Bugcrowd's "Bugcrowd Disclosures." Learn how others found, exploited, and reported vulnerabilities. This is crucial for understanding common patterns and reporting best practices.</li>
+</ul>
+
+<h2>Your Toolkit: Essential Software for 2026</h2>
+<p>You can't go hunting without the right gear.</p>
+<ul>
+  <li><strong>Burp Suite Community Edition:</strong> This is your bread and butter for web hacking. It’s an intercepting proxy that lets you see, modify, and replay HTTP requests. Learn to use the Proxy, Repeater, and Intruder modules inside out. The Professional edition is worth it if you get serious, but Community is perfectly fine for starting.</li>
+  <li><strong>Firefox / Chrome Developer Tools:</strong> Built right into your browser. Use them to inspect elements, monitor network requests, and debug JavaScript.</li>
+  <li><strong>Virtual Machine (VM):</strong> Install VirtualBox or VMware Workstation Player and set up a Kali Linux VM. Kali comes pre-loaded with a huge array of hacking tools. <strong>Always perform your testing from a VM</strong> to isolate your hacking activities from your main OS.</li>
+  <li><strong>Command Line Tools:</strong>
+    <ul>
+      <li><code>curl</code>: For making HTTP requests from the terminal.</li>
+      <li><code>dig</code> / <code>nslookup</code>: For DNS queries.</li>
+      <li><code>nmap</code>: For network scanning (use responsibly and only on in-scope targets).</li>
+      <li><code>whois</code>: For domain information.</li>
+    </ul>
+  </li>
+  <li><strong>Text Editor:</strong> VS Code or Sublime Text. You'll use these for notes, scripting, and reviewing code.</li>
+</ul>
+
+<h2>Getting Started on Bug Bounty Platforms</h2>
+<p>Once you feel you have a decent grasp of the fundamentals, it's time to dip your toes into the actual platforms.</p>
+<ul>
+  <li><strong>HackerOne & Bugcrowd:</strong> These are the two biggest platforms. Sign up, complete your profile, and start browsing programs.</li>
+  <li><strong>Focus on Public Programs:</strong> Many programs are private and require an invitation. Start with public programs, especially those that explicitly welcome beginners or have a wide scope.</li>
+  <li><strong>Read the Scope Carefully:</strong> This is paramount. Understand what is <strong>in-scope</strong> (allowed to test) and what is <strong>out-of-scope</strong> (not allowed). Testing out-of-scope can get you banned. Also pay attention to what kind of vulnerabilities they are looking for and what they explicitly <em>don't</em> want (e.g., purely theoretical DNS issues without impact).</li>
+  <li><strong>Understand the Rewards:</strong> Some programs offer monetary bounties, others "hall of fame" recognition, or swag. Manage your expectations.</li>
+</ul>
+
+<h2>Your First Bugs: What to Look For</h2>
+<p>Don't try to find a critical RCE on your first go. Start with "low-hanging fruit" and common vulnerabilities.</p>
+<ul>
+  <li><strong>Information Disclosure:</strong> Exposed API keys, sensitive files (.env, .git, backup files), directory listings, verbose error messages. While often low severity, they can sometimes chain into more serious issues and are great for getting your first reports accepted.</li>
+  <li><strong>Broken Access Control (BAC) / IDOR:</strong> Can you access another user's data or functionality by simply changing an ID in the URL or API request? Try manipulating user IDs, order IDs, document IDs.</li>
+  <li><strong>Cross-Site Scripting (XSS):</strong> Can you inject malicious JavaScript into the webpage that gets executed by other users' browsers? Look for reflected (payload in URL), stored (payload saved in DB), and DOM-based XSS.</li>
+  <li><strong>CORS Misconfigurations:</strong> Sometimes websites configure Cross-Origin Resource Sharing incorrectly, allowing your malicious site to read sensitive data from the target.</li>
+  <li><strong>Rate Limiting Issues:</strong> Can you brute-force login pages, password reset tokens, or OTPs because there's no rate limiting?</li>
+</ul>
+
+<div class="warning">
+  <p><strong>Reality check:</strong> Your first reports will likely be duplicates or rejected. This is normal. Learn from the feedback, improve your understanding, and keep going.</p>
+</div>
+
+<h2>The Reporting Process</h2>
+<p>A good bug report is crucial for getting paid. The best bug in the world won't get recognized if the report is sloppy.</p>
+<ul>
+  <li><strong>Clear Title:</strong> Descriptive and concise (e.g., "IDOR in User Profile leading to PII disclosure").</li>
+  <li><strong>Vulnerability Type:</strong> State the specific vulnerability.</li>
+  <li><strong>Affected URL/Endpoint:</strong> The exact location.</li>
+  <li><strong>Steps to Reproduce:</strong> This is the most important part. Provide precise, numbered steps. Assume the developer knows nothing about hacking.</li>
+  <li><strong>Proof of Concept (PoC):</strong> Include screenshots, video recordings, or specific cURL commands. Make it easy for them to replicate your findings.</li>
+  <li><strong>Impact:</strong> Clearly explain the potential consequences of the vulnerability. How could an attacker use this? What data is at risk?</li>
+  <li><strong>Remediation (Optional but helpful):</strong> Suggest a fix. This shows you understand the problem deeply.</li>
+</ul>
+
+<h2>Mindset and Persistence</h2>
+<p>Bug bounty hunting is a game of patience and persistence. You'll face many rejections, especially early on. Embrace them as learning opportunities. The security landscape is always evolving, so commit to continuous learning. Follow security researchers, read blogs, and stay updated on new attack techniques. Most importantly, always hack ethically and responsibly.</p>
+
+<div class="callout">
+  <p><strong>Your Next Steps:</strong>
+    <ol>
+      <li>Pick ONE fundamental skill (e.g., HTTP requests, Linux commands) and dive deep into PortSwigger Web Security Academy or TryHackMe.</li>
+      <li>Set up your Kali Linux VM and install Burp Suite Community.</li>
+      <li>Start reading bug bounty write-ups on HackerOne's Hacktivity.</li>
+    </ol>
+  </p>
+</div>
+
+<div class="disclosure">
+  <strong>Disclosure:</strong> Some links on this page may be affiliate links. I may earn a small commission if you sign up through them, at no extra cost to you. I only recommend tools I genuinely think are worth using.
+</div>
+</div>
+
+<footer>
+  <div class="footer-brand">⚡ RootAccess</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="how-to-get-into-cybersecurity.html">Start Here</a>
+  </div>
+  <p>Built for the cybersecurity community by a Michigan Tech CS student.</p>
+  <p style="margin-top: 8px;">Some links are affiliate links — they help support this site at no extra cost to you.</p>
+</footer>
+
+</body>
+</html>
